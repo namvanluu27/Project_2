@@ -32,43 +32,23 @@ function markerSize(location) {
   return location / 40;
 }
 
-// Each city object contains the city's name, location and population
-var cities = [
-  {
-    name: "New York",
-    location: [40.7128, -74.0059],
-    population: 8550405
-  },
-  {
-    name: "Chicago",
-    location: [41.8781, -87.6298],
-    population: 2720546
-  },
-  {
-    name: "Houston",
-    location: [29.7604, -95.3698],
-    population: 2296224
-  },
-  {
-    name: "Los Angeles",
-    location: [34.0522, -118.2437],
-    population: 3971883
-  },
-  {
-    name: "Omaha",
-    location: [41.2524, -95.9980],
-    population: 446599
-  }
-];
+var marker = L.marker([25.2744, -133.7751],{title: "Albatross"}).addTo(MyMap);
+var marker = L.marker([20.5937, -78.9629],{title: "Alexandrine Parakeet"}).addTo(MyMap);
+var marker = L.marker([44.211634, -54.5260],{title: "American Avocet"}).addTo(MyMap);
+var marker = L.marker([43.066772, -105.2551],{title: "American Bittern"}).addTo(MyMap);
+var marker = L.marker([46.646678, -99.002070],{title: "American Goldfinch"}).addTo(MyMap);
 
-// Loop through the cities array and create one marker for each city object
-for (var i = 0; i < cities.length; i++) {
-  L.circle(cities[i].location, {
-    fillOpacity: 0.75,
-    color: "white",
-    fillColor: "purple",
-    // Setting our circle's radius equal to the output of our markerSize function
-    // This will make our marker's size proportionate to its population
-    radius: markerSize(cities[i].population)
-  }).bindPopup("<h1>" + cities[i].name + "</h1> <hr> <h3>Population: " + cities[i].population + "</h3>").addTo(myMap);
-}
+var albatross = [[25.2744, -133.7751], [17.0732, -96.7266]];
+L.polyline(egline, {color: green}).addTo(myMap);
+
+var amParakeet = [[20.5937, -78.9629], [53.1355, -57.6604]];
+L.polyline(ftline, {color: red}).addTo(myMap);
+
+var amAvocet = [[44.211634, -54.5260], [-35.6751, -71.5430]];
+L.polyline(flamingoline, {color: green}).addTo(myMap);
+
+var amBittern = [[43.066772, -105.2551],[32.1656, -82.9001]];
+L.polyline(frigateline, {color: red}).addTo(myMap);
+
+var amGoldfinch = [[46.646678, -99.002070],[23.6345, -102.5280]];
+L.polyline(glossyline, {color: green}).addTo(myMap);
