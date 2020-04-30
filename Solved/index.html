@@ -14,15 +14,122 @@
 
   <!-- Our CSS -->
   <link rel="stylesheet" type="text/css" href="style.css">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  
+  <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
   <!-- The div where we will inject our map -->
   <div id="map"></div>
 
-  <!-- API key -->
+  <!-- API key
   <script type="text/javascript" src="config.js"></script>
   <!-- Our JS -->
-  <script type="text/javascript" src="logic.js"></script>
+  <!-- <script type="text/javascript" src="logic.js"></script> --> 
+
+<!--Start of navbar-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.html">Bird Project Home</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" id="navbarDropdownMenuLink" role="button" aria-haspopup="true" aria-expanded="false">Plots</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="temp.html">Max Temperature</a>
+              <a class="dropdown-item" href="humidity.html">Humidity</a>
+              <a class="dropdown-item" href="cloudiness.html">Cloudiness</a>
+              <a class="dropdown-item" href="wind.html">Wind Speed</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="comparison.html">Comparison</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="csvdata.html">Data</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <!-- End of navbar -->
+
+  <!-- Start of container -->
+  <div class="container">
+    <section class="row">
+      <div class="col-lg-7 col-md-12">
+        <div class="description-content">
+          <h1 class="description-header">Our Project:</h1>
+          <hr>
+          <img src="/Users/namluu/Desktop/Vanderbilt/Project_2/100-bird-species/valid/ALBATROSS/5.png" alt="Albatross" class="description-image">
+          <p>The purpose of this project was to analyze all the different bird species globally and their migration pattern in efforts to perfrom research on a fun topic and as a means of getting away from our real life world problems that is ongoing. To accomplish this analysis, we first pulled data from a csv and organized it and cleaned it up to submit and store in Postgres.  The data contains over 100 different bird species including longitude, latitude, and images of each different bird.</p>
+          <p>After assembling the dataset, we used geomap to plot various longitude and lattitude of each bird origins and it's migration pattern. This site provides the source data and visualizations created as part of the analysis.</p>
+        </div>
+      </div>
+      <div class="col-lg-5 col-md-12">
+​
+        <!-- Start of Visualizations imageNav Area -->
+        <section id="imageNav-area">
+          <div class="imageNav-content">
+            <h2 class="imageNav-header">Visualizations</h2>
+            <hr />
+            <div class="container">
+              <div class="row">
+                <div class="col-6">
+                  <a href="temp.html">
+                    <img src="/Users/namluu/Desktop/Vanderbilt/Project_2/100-bird-species/valid/CINNAMON TEAL/3.jpg" alt="Latitude vs. Max Temperature", title="Latitude vs. Max Temperature" class="imageNav-photo">
+    </a>
+  </div>
+  <div class="col-6">
+            <a href="humidity.html">
+      <img src="/Users/namluu/Desktop/Vanderbilt/Project_2/100-bird-species/valid/PEACOCK/5.jpg" alt="Latitude vs. Humidity", title="Latitude vs. Humidity" class="imageNav-photo">
+      </a>
+            </div>
+  <div class="col-6">
+            <a href="cloudiness.html">
+      <img src="/Users/namluu/Desktop/Vanderbilt/Project_2/100-bird-species/valid/WILD TURKEY/5.jpg" alt="Latitude vs. Cloudiness", title="Latitude vs. Cloudiness", class="imageNav-photo">
+    </a>
+  </div>
+  <div class="col-6">
+            <a href="wind.html">
+      <img src="/Users/namluu/Desktop/Vanderbilt/Project_2/100-bird-species/valid/WOOD DUCK/2.jpg" alt="Latitude vs. Wind Speed", title="Latitude vs. Wind Speed", class="imageNav-photo">
+    </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- End of the Visualizations imageNav Area -->
+​
+      </div>
+    </section>
+  </div>
+  <!-- End of container -->
+​
+  <!-- Start of footer -->
+  <footer>
+    <div class="footer">&copy; Copyright Coding Bootcamp 2020</div>
+  </footer>
+  <!-- End of footer -->
+​
+
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
